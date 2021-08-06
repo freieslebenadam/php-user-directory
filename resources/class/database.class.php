@@ -1,6 +1,6 @@
 <?php
 
-class Dabatase {
+class Database {
     private $host = "localhost";
     private $dbname = "user_directory";
     private $username = "root";
