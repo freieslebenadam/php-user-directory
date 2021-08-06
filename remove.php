@@ -23,7 +23,10 @@ $user = $uv->getBySlug($_GET['slug']);
         <section>
             <h2>Určitě to chcete udělat?</h2>
             <a href="/<?= $user['Slug'] ?>"><button type="button">NE</button></a>
-            <a href="/actions/deleteUser.php?id=<?= $user['ID'] ?>"><button type="submit">ANO</button></a>
+            <form action="../actions/deleteUser.php" method="POST" style="display: inline;">
+                <input type="hidden" name="id" value="<?= $user['ID'] ?>">
+                <button type="submit">ANO</button>
+            </form>
         </section>
         <hr>
         <section>
