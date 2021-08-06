@@ -17,11 +17,20 @@ $user = $uv->getBySlug($slug);
 
 <body>
     <header>
+        <a href="/">Zpět na seznam</a>
         <h1>Upravit uživatele <u><?= $user['FirstName']." ".$user['LastName'] ?></u></h1>
     </header>
     <hr>
     <main>
-
+        <section>
+            <?php include 'resources/inc/editform.inc.php'; ?>
+        </section>
+        <hr>
+        <section>
+            <form action="" method="POST">
+                <button type="submit"><i>Smazat uživatele <?= $user['FirstName'] ?></i></button>
+            </form>
+        </section>
     </main>
 </body>
 
