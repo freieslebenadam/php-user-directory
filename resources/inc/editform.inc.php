@@ -1,4 +1,4 @@
-<form action="" method="POST" novalidate>
+<form action="actions/editUser.php" method="POST" novalidate id="editForm">
     <div class="form-group">
         <label for="firstName"><b>Křestní jméno:*</b></label>
         <br>
@@ -48,6 +48,10 @@
             rows="10"
         ><?= $user['Description']; ?></textarea>
     </div>
+    
+    <input type="hidden" name="id" value="<?= $user['ID'] ?>">
+    <input type="hidden" name="slug" value="<?= $user['Slug'] ?>">
+
     <button type="submit">
         <b>Uložit</b>
     </button>

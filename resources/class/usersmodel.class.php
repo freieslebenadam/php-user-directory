@@ -61,4 +61,11 @@ class UsersModel extends Database {
         ]);
         return $result;
     }
+
+    protected function deleteUser($id) {
+        $sql = "DELETE FROM `users` WHERE ID = :id";
+        $statement = $this->connect()->prepare($sql);
+        $result = $statement->execute([":id" => $id]);
+        return $result;
+    }
 }

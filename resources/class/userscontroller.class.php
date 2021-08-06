@@ -12,6 +12,11 @@ class UsersController extends UsersModel {
         return $result;
     }
 
+    public function removeUser($id) {
+        $result = $this->deleteUser($id);
+        return $result;
+    }
+
     private function makeSlug($string, $divider) {
         $result = trim($string);
         $result = iconv('utf-8', 'us-ascii//TRANSLIT', $result);
