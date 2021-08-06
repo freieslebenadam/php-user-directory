@@ -18,24 +18,11 @@ include 'resources/inc/autoloader.inc.php';
     <hr>
     <main>
         <section>
-            <?php include 'resources/inc/createform.inc.php'; ?>
+            <?php include 'resources/inc/form.inc.php'; ?>
         </section>
     </main>
 
     <?php include 'resources/inc/scripts.inc.php'; ?>
-    <script type="text/javascript">
-        const createForm = document.querySelector('#createForm');
-
-        let pristine = new Pristine(createForm);
-
-        createForm.addEventListener('submit', (e) => {
-            let valid = pristine.validate();
-
-            if (!valid) {
-                e.preventDefault();
-            }
-        })
-    </script>
 </body>
 
 </html>

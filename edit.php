@@ -13,6 +13,7 @@ $user = $uv->getBySlug($slug);
 <head>
     <?php include 'resources/inc/meta.inc.php'; ?>
     <title>Upravit uživatele <?= $user['FirstName']." ".$user['LastName'] ?></title>
+    <?php include 'resources/inc/styles.inc.php'; ?>
 </head>
 
 <body>
@@ -23,7 +24,7 @@ $user = $uv->getBySlug($slug);
     <hr>
     <main>
         <section>
-            <?php include 'resources/inc/editform.inc.php'; ?>
+            <?php include 'resources/inc/form.inc.php'; ?>
         </section>
         <hr>
         <section>
@@ -34,19 +35,6 @@ $user = $uv->getBySlug($slug);
     </main>
 
     <?php include 'resources/inc/scripts.inc.php'; ?>
-    <script type="text/javascript">
-        const editForm = document.querySelector('#editForm');
-
-        let pristine = new Pristine(editForm);
-
-        editForm.addEventListener('submit', (e) => {
-            let valid = pristine.validate();
-
-            if (!valid) {
-                e.preventDefault();
-            }
-        })
-    </script>
 </body>
 
 </html>
