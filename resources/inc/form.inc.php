@@ -67,6 +67,10 @@ if (isset($user)) {
             name="phone"
             placeholder="123456789"
             value="<?= $phoneValue ?>"
+            data-pristine-maxlength="9"
+            data-pristine-pattern="/^[0-9]{9}$/g"
+            data-pristine-maxlength-message="Maximální počet znaků je 9"
+            data-pristine-pattern-message="Telefonní číslo musí být ve formátu 123456789"
         />
     </div>
     <div class="form-group">
@@ -83,7 +87,7 @@ if (isset($user)) {
     <input type="hidden" name="id" value="<?= $user['ID'] ?>">
     <input type="hidden" name="slug" value="<?= $user['Slug'] ?>">
     <?php endif; ?>
-    
+
     <button type="submit">
         <b><?= $btnValue ?></b>
     </button>

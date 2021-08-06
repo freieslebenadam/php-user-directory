@@ -22,7 +22,9 @@ $users = $uv->getAllUsers();
             <td><?= $user['Phone'] ?></td>
             <td><?= $user['Description'] ?></td>
             <td>
-                <a href="<?= $user['Slug'] ?>">Upravit</a>
+                <a href="<?= $user['Slug'] ?>">
+                    <button type="button">Upravit</button>
+                </a>
             </td>
         </tr>
     <?php endforeach; ?>
