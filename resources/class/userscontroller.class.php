@@ -3,6 +3,12 @@
 class UsersController extends UsersModel {
 
     public function addUser($firstName, $lastName, $email, $phone, $description) {
+        $firstName = trim($firstName);
+        $firstName = ucfirst($firstName);
+
+        $lastName = trim($lastName);
+        $lastName = ucfirst($lastName);
+
         $result = $this->createUser($firstName, $lastName, $email, $phone, $description, $this->makeFullSlug($firstName, $lastName));
         return $result;
     }

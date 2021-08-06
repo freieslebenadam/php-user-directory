@@ -32,6 +32,21 @@ $user = $uv->getBySlug($slug);
             </form>
         </section>
     </main>
+
+    <?php include 'resources/inc/scripts.inc.php'; ?>
+    <script type="text/javascript">
+        const editForm = document.querySelector('#editForm');
+
+        let pristine = new Pristine(editForm);
+
+        editForm.addEventListener('submit', (e) => {
+            let valid = pristine.validate();
+
+            if (!valid) {
+                e.preventDefault();
+            }
+        })
+    </script>
 </body>
 
 </html>

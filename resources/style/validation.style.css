@@ -1,0 +1,9 @@
+
+.has-danger > .form-control {
+    border: 2px solid red;
+}
+.pristine-error {
+    color: red;
+    font-weight: bold;
+    font-size: .8em;
+}

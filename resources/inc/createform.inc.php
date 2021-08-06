@@ -6,6 +6,10 @@
             type="text"
             name="firstName"
             placeholder="Jan"
+            data-pristine-required
+            data-pristine-maxlength="20"
+            data-pristine-required-message="Toto pole nemůže zůstat prázné."
+            data-pristine-maxlength-message="Maximální počet znaků je 20"
         />
     </div>
     <div class="form-group">
@@ -15,6 +19,10 @@
             type="text"
             name="lastName"
             placeholder="Novák"
+            data-pristine-required
+            data-pristine-maxlength="20"
+            data-pristine-required-message="Toto pole nemůže zůstat prázné."
+            data-pristine-maxlength-message="Maximální počet znaků je 20"
         />
     </div>
     <div class="form-group">
@@ -24,6 +32,9 @@
             type="email"
             name="email"
             placeholder="novak@email.cz"
+            data-pristine-maxlength="50"
+            data-pristine-maxlength-message="Maximální počet znaků je 50"
+            data-pristine-email-message="Toto není platná email adresa"
         />
     </div>
     <div class="form-group">
