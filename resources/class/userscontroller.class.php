@@ -9,7 +9,16 @@ class UsersController extends UsersModel {
         $lastName = trim($lastName);
         $lastName = ucfirst($lastName);
 
-        $result = $this->createUser($firstName, $lastName, $email, $phone, $description, $this->makeFullSlug($firstName, $lastName));
+        $slug = $this->makeFullSlug($firstName, $lastName);
+
+        $users = $this->fetchAllUsers();
+        foreach ($users as $u) {
+            if ($u['Slug'] === $slug) {
+                return false;
+            }
+        }
+
+        $result = $this->createUser($firstName, $lastName, $email, $phone, $description, $slug);
         return $result;
     }
 
