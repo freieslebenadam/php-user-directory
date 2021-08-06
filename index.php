@@ -10,15 +10,21 @@ include 'resources/inc/autoloader.inc.php';
 </head>
 
 <body>
-    <h1>Hello world</h1>
-    <?php 
-        $uv = new UsersView();
-        $users = $uv->getAllUsers();
-
-        foreach ($users as $user) {
-            echo $user['FirstName'] . "<br>";
-        }
-    ?>
+    <header>
+        <h1>Archiv uživatelů</h1>
+    </header>
+    <hr>
+    <main>
+        <section>
+            <h2>Vytvořit uživatele:</h2>
+            <?php include 'resources/inc/createform.inc.php'; ?>
+        </section>
+        <hr>
+        <section>
+            <h2>Seznam:</h2>
+            <?php include 'resources/inc/userstable.inc.php'; ?>
+        </section>
+    </main>
 </body>
 
 </html>
