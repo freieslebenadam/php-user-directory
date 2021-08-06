@@ -14,11 +14,9 @@ Jediná využitá knihovna je [Pristine](https://pristine.js.org) k jednoduché 
 
 ## Použité technologie
 
-- **PHP**
-    - *OOP*
+- **PHP** *(OOP)*
 - SQL
 - HTML
-- JavaScript 
-    - *(ES6)*
+- JavaScript *(ES6)*
 - CSS
 - GIT
