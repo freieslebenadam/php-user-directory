@@ -6,7 +6,7 @@ include 'resources/inc/autoloader.inc.php';
 
 <head>
     <?php include 'resources/inc/meta.inc.php'; ?>
-    <title>Document</title>
+    <title>Archiv uživatelů</title>
 </head>
 
 <body>

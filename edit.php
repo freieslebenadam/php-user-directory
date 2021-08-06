@@ -27,7 +27,7 @@ $user = $uv->getBySlug($slug);
         </section>
         <hr>
         <section>
-            <form action="" method="POST">
+            <form action="<?= $user['Slug'] ?>/odstranit" method="GET">
                 <button type="submit"><i>Smazat uživatele <?= $user['FirstName'] ?></i></button>
             </form>
         </section>
