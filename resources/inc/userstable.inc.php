@@ -2,7 +2,6 @@
 
 $uv = new UsersView();
 $users = $uv->getAllUsers();
-
 ?>
 <table border=1 style="border-collapse: collapse;" >
     <thead>
@@ -29,4 +28,13 @@ $users = $uv->getAllUsers();
         </tr>
     <?php endforeach; ?>
     </tbody>
+    <?php if(count($users) === 0): ?>
+    <tfoot>
+        <tr>
+            <td colspan="5">
+                Zatím tu nejsou žádní uživatelé. Přidejte nějakého!
+            </td>
+        </tr>
+    </tfoot>
+    <?php endif; ?>
 </table>
