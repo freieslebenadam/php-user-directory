@@ -17,7 +17,7 @@ include 'resources/inc/autoloader.inc.php';
     <main>
         <section>
             <h2>Vytvořit uživatele:</h2>
-            <?php include 'resources/inc/createform.inc.php'; ?>
+            <a href="vytvorit-uzivatele"><button type="button">Nový uživatel</button></a>
         </section>
         <hr>
         <section>

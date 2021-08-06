@@ -25,4 +25,40 @@ class UsersModel extends Database {
         $result = $statement->fetch();
         return $result;
     }
+
+    protected function createUser($firstName, $lastName, $email, $phone, $description, $slug) {
+        $sql = "INSERT INTO `users` (FirstName, LastName, Email, Phone, Description, Slug)
+                VALUES (:firstname, :lastname, :email, :phone, :description, :slug)";
+        $statement = $this->connect()->prepare($sql);
+        $result = $statement->execute([
+            ":firstname" => $firstName,
+            ":lastname" => $lastName,
+            ":email" => $email,
+            ":phone" => $phone,
+            ":description" => $description,
+            ":slug" => $slug
+        ]);
+        return $result;
+    }
+
+    protected function updateUser($id, $firstName, $lastName, $email, $phone, $description, $slug) {
+        $sql = "UPDATE `users` SET FirstName = :firstname, 
+                                   LastName = :lastname,
+                                   Email = :email,
+                                   Phone = :phone,
+                                   Description = :description,
+                                   Slug = :slug
+                WHERE ID = :id";
+        $statement = $this->connect()->prepare($sql);
+        $result = $statement->execute([
+            ":id" => $id,
+            ":firstname" => $firstName,
+            ":lastname" => $lastName,
+            ":email" => $email,
+            ":phone" => $phone,
+            ":description" => $description,
+            ":slug" => $slug
+        ]);
+        return $result;
+    }
 }
