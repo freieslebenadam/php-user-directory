@@ -6,4 +6,9 @@ class UsersView extends UsersModel {
         $result = $this->fetchAllUsers();
         return $result;
     }
+
+    public function getBySlug($slug) {
+        $result = $this->fetchBySlug($slug);
+        return $result;
+    }
 }

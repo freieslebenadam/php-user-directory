@@ -1,6 +1,8 @@
 <?php
+
 $uv = new UsersView();
 $users = $uv->getAllUsers();
+
 ?>
 <table border=1 style="border-collapse: collapse;" >
     <thead>
@@ -20,7 +22,7 @@ $users = $uv->getAllUsers();
             <td><?= $user['Phone'] ?></td>
             <td><?= $user['Description'] ?></td>
             <td>
-                <a href="/<?= $user['Slug'] ?>" type="button">Upravit</a>
+                <a href="<?= $user['Slug'] ?>">Upravit</a>
             </td>
         </tr>
     <?php endforeach; ?>
