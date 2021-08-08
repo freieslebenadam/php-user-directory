@@ -1,13 +1,13 @@
 <?php 
-include 'resources/inc/autoloader.inc.php';
+require 'resources/inc/autoloader.inc.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <?php include 'resources/inc/meta.inc.php'; ?>
+    <?php require 'resources/inc/meta.inc.php'; ?>
     <title>Vytvořit nového uživatele</title>
-    <?php include 'resources/inc/styles.inc.php'; ?>
+    <?php require 'resources/inc/styles.inc.php'; ?>
 </head>
 
 <body>
@@ -18,11 +18,11 @@ include 'resources/inc/autoloader.inc.php';
     <hr>
     <main>
         <section>
-            <?php include 'resources/inc/form.inc.php'; ?>
+            <?php require 'resources/inc/form.inc.php'; ?>
         </section>
     </main>
 
-    <?php include 'resources/inc/scripts.inc.php'; ?>
+    <?php require 'resources/inc/scripts.inc.php'; ?>
 </body>
 
 </html>

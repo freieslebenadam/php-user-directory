@@ -1,7 +1,7 @@
 <?php
-include_once '../resources/class/database.class.php';
-include_once '../resources/class/usersmodel.class.php';
-include_once '../resources/class/userscontroller.class.php';
+require_once '../resources/class/database.class.php';
+require_once '../resources/class/usersmodel.class.php';
+require_once '../resources/class/userscontroller.class.php';
 
 $uc = new UsersController();
 

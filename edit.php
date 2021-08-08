@@ -1,5 +1,5 @@
 <?php 
-include 'resources/inc/autoloader.inc.php';
+require 'resources/inc/autoloader.inc.php';
 
 $slug = $_GET['slug'];
 
@@ -11,9 +11,9 @@ $user = $uv->getBySlug($slug);
 <html lang="en">
 
 <head>
-    <?php include 'resources/inc/meta.inc.php'; ?>
+    <?php require 'resources/inc/meta.inc.php'; ?>
     <title>Upravit uživatele <?= $user['FirstName']." ".$user['LastName'] ?></title>
-    <?php include 'resources/inc/styles.inc.php'; ?>
+    <?php require 'resources/inc/styles.inc.php'; ?>
 </head>
 
 <body>
@@ -24,7 +24,7 @@ $user = $uv->getBySlug($slug);
     <hr>
     <main>
         <section>
-            <?php include 'resources/inc/form.inc.php'; ?>
+            <?php require 'resources/inc/form.inc.php'; ?>
         </section>
         <hr>
         <section>
@@ -34,7 +34,7 @@ $user = $uv->getBySlug($slug);
         </section>
     </main>
 
-    <?php include 'resources/inc/scripts.inc.php'; ?>
+    <?php require 'resources/inc/scripts.inc.php'; ?>
 </body>
 
 </html>

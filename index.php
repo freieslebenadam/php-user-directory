@@ -1,11 +1,11 @@
 <?php 
-include 'resources/inc/autoloader.inc.php';
+require 'resources/inc/autoloader.inc.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <?php include 'resources/inc/meta.inc.php'; ?>
+    <?php require 'resources/inc/meta.inc.php'; ?>
     <title>Archiv uživatelů</title>
 </head>
 
@@ -22,7 +22,7 @@ include 'resources/inc/autoloader.inc.php';
         <hr>
         <section>
             <h2>Seznam:</h2>
-            <?php include 'resources/inc/userstable.inc.php'; ?>
+            <?php require 'resources/inc/userstable.inc.php'; ?>
         </section>
     </main>
 </body>

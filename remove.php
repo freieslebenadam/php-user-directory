@@ -1,5 +1,5 @@
 <?php 
-include 'resources/inc/autoloader.inc.php';
+require 'resources/inc/autoloader.inc.php';
 
 $uv = new UsersView();
 $user = $uv->getBySlug($_GET['slug']);
@@ -9,7 +9,7 @@ $user = $uv->getBySlug($_GET['slug']);
 <html lang="en">
 
 <head>
-    <?php include 'resources/inc/meta.inc.php'; ?>
+    <?php require 'resources/inc/meta.inc.php'; ?>
     <title>Opravdu chcete odstranit uživatele?</title>
 </head>
 
