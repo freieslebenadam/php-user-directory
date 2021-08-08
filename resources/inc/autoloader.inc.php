@@ -11,5 +11,5 @@ function classLoader($className) {
         return false;
     }
 
-    include_once $fullPath;
+    require_once $fullPath;
 }
