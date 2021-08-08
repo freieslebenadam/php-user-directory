@@ -1,5 +1,5 @@
 <?php 
-require 'resources/inc/autoloader.inc.php';
+require_once 'resources/inc/classes.inc.php';
 
 $slug = $_GET['slug'];
 

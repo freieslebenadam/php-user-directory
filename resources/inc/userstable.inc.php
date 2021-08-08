@@ -1,7 +1,5 @@
 <?php
-require_once 'resources/class/database.class.php';
-require_once 'resources/class/usersmodel.class.php';
-require_once 'resources/class/usersview.class.php';
+require_once 'resources/inc/classes.inc.php';
 
 $uv = new UsersView();
 $users = $uv->getAllUsers();
