@@ -11,6 +11,8 @@ Projekt je třeba spouštět v Apachi prostředí.
 
 Pro vytvoření MySQL databáze slouží soubor `user_directory.sql`.
 
+Pro úspěšné připojení k databázi je pořeba nakonfigurovat PDO konstanty v souboru `resources/class/database.class.php`
+
 ## Externí knihovny
 
 Jediná využitá knihovna je [Pristine](https://pristine.js.org) k jednoduché validaci formuláře.
