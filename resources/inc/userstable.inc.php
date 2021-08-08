@@ -1,5 +1,7 @@
 <?php
-require_once '../inc/autoloader.inc.php';
+require_once '../class/database.class.php';
+require_once '../class/usersmodel.class.php';
+require_once '../class/usersview.class.php';
 
 $uv = new UsersView();
 $users = $uv->getAllUsers();
