@@ -1,4 +1,5 @@
 <?php
+require_once '../inc/autoloader.inc.php';
 
 $uv = new UsersView();
 $users = $uv->getAllUsers();
